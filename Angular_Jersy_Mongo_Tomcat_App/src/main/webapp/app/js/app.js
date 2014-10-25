@@ -1,28 +1,22 @@
 "use strict"
-/*var qaApp = angular.module('qaApp', ['ngRoute', 'ngResource', 'wijspread', 'ui.bootstrap', 'dialogs', 'qaControllers', 'qaServices']);*/
-var qaApp = angular.module('qaApp',['ngRoute','ngResource','ui.bootstrap','dialogs']);
-qaApp.config(['$routeProvider',
-    function ($routeProvider) {
-        $routeProvider.
-        when('/login', {
+var qaApp = angular.module('qaApp',['ui.router','ngResource','wijspread','ui.bootstrap','dialogs','qaControllers','qaServices']);
+qaApp.config(['$stateProvider','$urlRouterProvider',
+    function ($stateProvider,$urlRouterProvider) {
+    
+	$urlRouterProvider.otherwise('/modules');
+	
+	$stateProvider.
+        state('login', {
+        	url: '/login',
             templateUrl: 'views/login.html'
         }).
-        when('/signup', {
+        state('signup', {
+        	url: '/signup',
             templateUrl: 'views/signup.html'
         }).
-        when('/users/:userId', {
-            templateUrl: 'views/modules.html',
-            controller: 'ModuleController'
-        }).
-        when('/modules/:moduleId', {
-            templateUrl: 'views/spread-sheet.html',
-            controller: 'SheetController'
-        }).
-        when('/modules', {
-            templateUrl: 'views/modules.html',
-        }).
-
-        otherwise({
-            redirectTo: '/login'
+        state('modules', {
+        	url: '/modules',
+            templateUrl: 'views/modules.html'
         });
+	
 }]);

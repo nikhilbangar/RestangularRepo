@@ -18,16 +18,16 @@
 
 
     <!-- Wijmospread JS -->
-    <!--<script src="http://cdn.wijmo.com/spreadjs/jquery.wijmo.wijspread.all.1.20133.8.min.js" type="text/javascript"></script>
-    <script type="text/javascript" src="js/script/angular.wijmo.wijspread.1.20133.8.min.js"></script>-->
+    <script  type="text/javascript" src="js/jquery.wijmo.wijspread.all.1.20133.8.min.js"></script>
+    <script type="text/javascript" src="js/angular.wijmo.wijspread.1.20133.8.min.js"></script>
 
     <!-- Angular module dialog JS  -->
     <script src="http://m-e-conroy.github.io/angular-dialog-service/javascripts/dialogs.min.js" type="text/javascript"></script>
 
     <!-- Application JS-->
     <script src="js/app.js"></script>
-   <!-- <script src="js/controller/controllers.js"></script>-->
-   <!-- <script src="js/service/services.js"></script>-->
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
 
     <!-- Bootstrap, wijmo and custom css -->
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -38,7 +38,7 @@
 </head>
 
 <body>
-    <div ng-view></div>
+    <div ui-view></div>
 </body>
 
 </html>
