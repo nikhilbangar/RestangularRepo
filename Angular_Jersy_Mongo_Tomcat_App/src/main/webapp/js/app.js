@@ -3,7 +3,7 @@ var qaApp = angular.module('qaApp',['ui.router','ngResource','wijspread','ui.boo
 qaApp.config(['$stateProvider','$urlRouterProvider',
     function ($stateProvider,$urlRouterProvider) {
     
-	$urlRouterProvider.otherwise('/modules');
+	$urlRouterProvider.otherwise('/login');
 	
 	$stateProvider.
         state('login', {
