@@ -1,0 +1,38 @@
+<div class="container-fluid">
+        <div class="row"> <!-- header part -->
+               <div class="col-xs-12 col-md-12">
+                   <div class="panel panel-info">
+                        <div class="panel-heading">
+                                    <header class="panel-title">QA Script Automation<header/>
+                                        <p class="text-right">
+                                    <span id="authMailId" class="authMailId"><a><%= userId %></a></span>
+                                   <button type="button" class="btn btn-primary btn-lg" id="loginButton" ng-click="logout()">Logout</a></button>
+                                            </p>
+                        </div>
+                    </div>
+                </div> 
+        </div>
+            
+        <div class="row"><br/><br/></div>
+            
+            
+        <div class="row">
+                
+                <div class="col-xs-12 col-md-2">
+                    <div class="container navleft">
+                        <ul class="nav nav-pills nav-stacked navul" id ="left-menu">
+                            <li class="active ld" id="lDetails"><a href="#">Modules</a></li>
+                            <li class="libgclr al" id="aLeave"><a ui-sref=".module1">Registration</a></li>
+                            <li class="libgclr cl" id ="cLeave"><a ui-sref=".module2">Login</a></li>
+                            <li class="libgclr apl" id ="apprLeave"><a ui-sref=".module3">Client</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                    <div class="col-xs-12 col-md-10">
+                          <div ui-view></div>
+                    </div>
+            </div>
+            </div>
+    </div>
+      
